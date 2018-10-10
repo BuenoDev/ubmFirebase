@@ -52,8 +52,8 @@ public class MainActivity extends AppCompatActivity {
                 String nome = editNome.getText().toString();
                 String email = editEmail.getText().toString();
 
-                database.child("Usuario").child("Nome").child(nome);
-                database.child("Usuario").child("Email").child(email);
+                database.child("Usuario").child("Nome").setValue(nome);
+                database.child("Usuario").child("Email").setValue(email);
             }
         });
     }

@@ -27,8 +27,12 @@ public class FormListAdapter extends RecyclerView.Adapter<FormListAdapter.FormVi
     @Override
     public void onBindViewHolder(@NonNull FormViewHolder holder, int position) {
         //Dados vindos do Firebase
+
         String nome = database.child("Usuario").child("Nome").toString();
         String email = database.child("Usuario").child("Email").toString();
+
+        holder.textEmail.setText(email);
+        holder.textNome.setText(nome);
     }
 
     @Override
